@@ -1,16 +1,13 @@
 import React from 'react'
 import { Inter } from '@next/font/google';
-
+import Buttons from '../components/Buttons';
 const inter = Inter();
 
 function Home() {
   return (
     <div id="home" className={inter.className}>
         <header>
-            <div className="button-container">
-                <button>1</button>
-                <button>2</button>
-            </div>
+            <Buttons/>
         </header>
         <div className="page-1">
             <h1 className='title'>Luca Palminteri</h1>
