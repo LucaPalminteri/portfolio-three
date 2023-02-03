@@ -1,0 +1,10 @@
+@keyframes show-up {
+    0% {
+        transform: scale(.5);
+        color: #FAFAFA;
+    }
+    100% {
+        transform: scale(1);
+        color: #222;
+    }
+}
