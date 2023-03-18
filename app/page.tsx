@@ -11,7 +11,7 @@ function Home() {
         <header>
             <Buttons/>
         </header>
-        <div className="page-1">
+        <div className="section-1">
             <h1 className='title'>
                 <span>L</span>
                 <span>u</span>
@@ -25,16 +25,16 @@ function Home() {
             </div>
             <DownArrow/>
         </div>
-        <div className="page-1">
+        <div className="section-1">
             <h1 className='title'>Section 2</h1>
         </div>
-        <div className="page-1">
+        <div className="section-1">
             <h1 className='title'>Section 3</h1>
         </div>
-        <div className="page-1">
+        <div className="section-1">
             <h1 className='title'>Section 4</h1>
         </div>
-        <div className="page-1">
+        <div className="section-1">
             <h1 className='title'>Section 5</h1>
         </div>
     </div>
