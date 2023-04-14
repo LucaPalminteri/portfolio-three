@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 
@@ -8,19 +8,34 @@ function Buttons() {
 
     const [theme, setTheme] = useState(false)
 
+    useEffect(() => {
+      let themeLocalStorage = localStorage.getItem('theme')
+
+      if (themeLocalStorage == '0') {
+        setTheme(false)
+      }
+      else {
+        setTheme(true)
+      }
+
+      toggleTheme()
+    }, [])
+    
+
+
     function toggleTheme() {
-        console.log("change theme")
         if (!theme) {
             document.body.style.backgroundColor = '#111'
             document.body.style.color = '#FFF'
             document.body.style.transitionDuration = '1s'
             setTheme(prev => !prev)
+            localStorage.setItem('theme','0')
         }
         else {
             document.body.style.backgroundColor = '#FAFAFA'
             document.body.style.color = '#111'
-
             setTheme(prev => !prev)
+            localStorage.setItem('theme','1')
         }
     }
 
