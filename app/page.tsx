@@ -2,6 +2,7 @@ import React from 'react'
 import { Inter } from '@next/font/google';
 import Buttons from '../components/Buttons';
 import DownArrow from '../components/DownArrow';
+import Section from '../components/Section';
 
 const inter = Inter();
 
@@ -9,9 +10,9 @@ function Home() {
   return (
     <div id="home" className={inter.className}>
         <header>
-            <Buttons/>
+            <Buttons />
         </header>
-        <div className="section-1">
+        <div className="section">
             <h1 className='title'>
                 <span>L</span>
                 <span>u</span>
@@ -23,20 +24,13 @@ function Home() {
                 <button className={inter.className}>Contact</button>
                 <button className={inter.className}>Resume</button>
             </div>
-            <DownArrow/>
+            <DownArrow />
         </div>
-        <div className="section-1">
-            <h1 className='title'>Section 2</h1>
-        </div>
-        <div className="section-1">
-            <h1 className='title'>Section 3</h1>
-        </div>
-        <div className="section-1">
-            <h1 className='title'>Section 4</h1>
-        </div>
-        <div className="section-1">
-            <h1 className='title'>Section 5</h1>
-        </div>
+
+        <Section title={"My work"} />
+        <Section title={"About Me"} />
+        <Section title={"Contact Me"} />
+        
     </div>
   )
 }
